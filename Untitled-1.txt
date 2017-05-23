@@ -1,0 +1,58 @@
+{
+    idNumber: "1234567890123",
+    title: "นาย",
+    firstName: "เดวิด",
+    lastName: "เบคแฮม",
+    age: 40,
+    acceptDate: 2017-05-15,
+    acceptTime: 12:00:00,
+    homeName: "บ้านลีลาวดี",
+    relative: {
+        type: "ญาติ",
+        title: "นาย",
+        firstName: "อเล็กซ์",
+        lastName: "เฟอร์กูสันต์",
+        contractAddress: "123 หมู่ 1 ต.เสือโฮก อ.เมือง จ.ชัยนาท 17000",
+        relation: "บิดา",
+        tel: "0999999999"
+    },
+    information: {
+        gender: String,
+        ethnicity: String,
+        religion: String,
+        status: String,
+        education: String,
+        career: String,
+        salary: Number,
+        medicalPrivilege: String,
+        universalHealthInsuranceCardNo: String,
+        personality: [String],
+        selfHelp: String,
+        issue: [String]
+    },
+    address: [{
+            oldAddress: {
+                no: Number,
+                moo: Number,
+                soi: String,
+                road: String,
+                subDistrict: String,
+                district: String,
+                province: String,
+                zipCode: Number
+            }
+        },
+        {
+            currentAddress: {
+                no: Number,
+                moo: Number,
+                soi: String,
+                road: String,
+                subDistrict: String,
+                district: String,
+                province: String,
+                zipCode: Number
+            }
+        }
+    ]
+}
