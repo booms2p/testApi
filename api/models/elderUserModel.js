@@ -33,38 +33,36 @@ var ElderUserSchema = new Schema({
         status: String,
         education: String,
         career: String,
-        salary: Number,
+        salary: String,
         medicalPrivilege: String,
         universalHealthInsuranceCardNo: String,
         personality: [String],
         selfHelp: String,
         issue: [String]
     },
-    address: [{
-            oldAddress: {
-                no: Number,
-                moo: Number,
-                soi: String,
-                road: String,
-                subDistrict: String,
-                district: String,
-                province: String,
-                zipCode: Number
-            }
+    address: {
+        oldAddress: {
+            no: Number,
+            moo: Number,
+            soi: String,
+            road: String,
+            subDistrict: String,
+            district: String,
+            province: String,
+            zipCode: Number
         },
-        {
-            currentAddress: {
-                no: Number,
-                moo: Number,
-                soi: String,
-                road: String,
-                subDistrict: String,
-                district: String,
-                province: String,
-                zipCode: Number
-            }
+        currentAddress: {
+            no: Number,
+            moo: Number,
+            soi: String,
+            road: String,
+            subDistrict: String,
+            district: String,
+            province: String,
+            zipCode: Number
         }
-    ]
+    }
+
 });
 
 module.exports = mongoose.model('elderUsers', ElderUserSchema);

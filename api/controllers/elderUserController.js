@@ -27,7 +27,7 @@ exports.find_elder_user = function(req, res) {
         if (err)
             res.send(err);
         else if (result.length === 0)
-            res.json({ status: 'unsuccesful', message: 'Can not find user from inNumber ' + req.params.idNumber });
+            res.json({ status: 'unsuccesful', message: 'Can not find user from ID Number ' + req.params.idNumber });
         else
             res.json({ status: 'succesful', data: result });
     });
