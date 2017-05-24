@@ -14,22 +14,22 @@ exports.get_elder_user = function(req, res) {
 
 exports.create_elder_user = function(req, res) {
     var new_user_data = new User(req.body);
-    new_user_data.save(function(err, userData) {
+    new_user_data.save(function(err, result) {
         if (err)
             res.send(err);
         else
-            res.json({ status: 'successful', data: userData });
+            res.json({ status: 'successful', data: result });
     });
 };
 
 exports.find_elder_user = function(req, res) {
-    User.find({ 'idNumber': req.params.idNumber }, function(err, user) {
+    User.find({ 'idNumber': req.params.idNumber }, function(err, result) {
         if (err)
             res.send(err);
-        else if (user.length === 0)
+        else if (result.length === 0)
             res.json({ status: 'unsuccesful', message: 'Can not find user from inNumber ' + req.params.idNumber });
         else
-            res.json({ status: 'succesful', data: user });
+            res.json({ status: 'succesful', data: result });
     });
 };
 
